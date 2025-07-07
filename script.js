@@ -16,8 +16,29 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 
 
 // varibile chilometri in cui bisogna inserire i km che il passeggero vuole percorrere, tramite prompt
+const chilometri = Number(prompt('Inserisci il numero di chilometri da percorrere'));
+console.log(chilometri);
+
 //variabile eta, sempre tramite prompt
+const eta = Number(prompt('Inserisci la tua età'))
+console.log(eta);
+
 //creare nuova variabile, prezzo, calcolare il prezzo del biglietto, facendo variabile chilometri*0,21
+let prezzo = chilometri * 0.21;
+console.log(prezzo);
+
 //verificare se c'è da applicare la scontistica, if var eta<18 prezzo= prezzo- (prezzo*0,2)
 // if var eta>=65 prezzo=prezzo-(prezzo*0,4)
 //far comparire il prezzo finale
+
+let prezzo_finale = ''; 
+if (eta < 18) {
+    prezzo_finale = (prezzo - (prezzo * 0.2)).toFixed(2);
+    console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
+} else if (eta >= 65) {
+    prezzo_finale = (prezzo - (prezzo * 0.4)).toFixed(2);
+    console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
+} else {
+    prezzo_finale = prezzo.toFixed(2);
+    console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
+}
