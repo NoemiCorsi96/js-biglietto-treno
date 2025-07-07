@@ -31,14 +31,13 @@ console.log(prezzo);
 // if var eta>=65 prezzo=prezzo-(prezzo*0,4)
 //far comparire il prezzo finale
 
-let prezzo_finale = ''; 
+//let prezzo_finale = ''; 
 if (eta < 18) {
-    prezzo_finale = (prezzo - (prezzo * 0.2)).toFixed(2);
-    console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
+    prezzo = (prezzo - (prezzo * 0.2));
+    //console.log( `Il prezzo finale è di: ${(prezzo_finale).toFixed(2)} € `) ;
 } else if (eta >= 65) {
-    prezzo_finale = (prezzo - (prezzo * 0.4)).toFixed(2);
-    console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
-} else {
-    prezzo_finale = prezzo.toFixed(2);
-    console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
-}
+    prezzo = (prezzo - (prezzo * 0.4));
+    //console.log( `Il prezzo finale è di: ${prezzo_finale} € `) ;
+} 
+ let prezzo_finale = prezzo.toFixed(2);
+console.log( `Il prezzo finale è di: ${(prezzo_finale)} € `) ;
